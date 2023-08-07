@@ -1,2 +1,59 @@
 @use '../util' as *;
 
+.header{
+
+    .container {
+        background-color: rgb(170, 196, 219);
+        padding: rem(20);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: rem(18);
+        @include breakpoint(medium){
+            flex-direction: row-reverse; // Show Logo before Navbar
+            gap: rem(35);
+        }
+    }
+    
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(20);
+
+        @include breakpoint(medium) {
+            gap: rem(33);
+        }
+
+        &--avatar {
+            max-width: rem(24);
+            margin: 6px;
+            vertical-align: middle;
+            border-radius: 50%;
+            
+            transition: box-shadow 0.3s;
+            box-shadow: 0 0 0 1.5px #ddd;
+
+            &:hover{
+                box-shadow: 0 0 0 1.5px var(--orange);
+                cursor: pointer;
+            }
+
+            @include breakpoint(medium) {
+                max-width: rem(35);
+                margin: 0;
+            }
+        }
+        &--cart {
+            max-width: rem(20);
+            @include breakpoint(medium) {
+                max-width: rem(18);
+            }
+        }
+    }
+}

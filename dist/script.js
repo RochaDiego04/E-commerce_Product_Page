@@ -1,2 +1,2 @@
-"use strict";console.log("Hello");
+"use strict";var navbar=document.querySelector("#navbar"),btnOpen=document.querySelector("#open"),btnClose=document.querySelector("#close");function showMenu(){navbar.classList.add("visible")}function hideMenu(){navbar.classList.remove("visible")}btnOpen.addEventListener("click",showMenu),btnClose.addEventListener("click",hideMenu);
 //# sourceMappingURL=script.js.map
