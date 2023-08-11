@@ -1,0 +1,15 @@
+@use '../util' as *;
+
+.header{
+    &__line{
+        display: none;
+        margin: 0;
+        border: rem(1.82) solid var(--header-line);
+        border-bottom: none;
+        border-right: none;
+        border-left: none;
+        @include breakpoint(medium){
+            display: block;
+        }
+    }
+}

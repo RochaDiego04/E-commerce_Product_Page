@@ -1,13 +1,15 @@
 @use '../util' as *;
 
 .header{
-
     .container {
-        background-color: rgb(170, 196, 219);
+        background-color: var(--white);
         padding: rem(20);
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include breakpoint(medium){
+            padding: rem(20) rem(20) rem(30) rem(20);
+        }
     }
 
     &__left {
@@ -50,9 +52,14 @@
             }
         }
         &--cart {
+            fill: #69707D;
             max-width: rem(20);
             @include breakpoint(medium) {
                 max-width: rem(18);
+            }
+            &:hover{
+                filter: invert(1) brightness(0) saturate(100%) hue-rotate(0deg); // Change svg to black
+                cursor: pointer;
             }
         }
     }
